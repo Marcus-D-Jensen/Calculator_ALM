@@ -20,5 +20,9 @@ public class Calculate {
         return c; 
     }
 
+    public String returnFunction(String args){
+        String[] numbersAndFunction = args.split(" ");
+        return numbersAndFunction[1];
+    }
 
 }
