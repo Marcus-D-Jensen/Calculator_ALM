@@ -11,14 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Marcus D Jensen
- */
+
 public class Calculator_ALM extends Application {
     
     @Override
@@ -73,8 +69,16 @@ public class Calculator_ALM extends Application {
             }
         });
         
+        btnC.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                label.setText("");
+            }
+        });
+        
         GridPane root = new GridPane();
-        root.add(label, 0, 0);
+
         root.add(btn1, 0, 1);
         root.add(btn2, 1, 1);
         root.add(btn3, 2, 1);
