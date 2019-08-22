@@ -41,6 +41,10 @@ public class Calculator_ALM extends Application {
         Button btnC = new Button("C");
         Button btnE = new Button("=");
         
+        Button btnAdd = new Button("+");
+        Button btnSub = new Button("-");
+        Button btnMul = new Button("*");
+        Button btnDiv = new Button("/");
         
         btn0.setMinSize(50, 50);
         btn1.setMinSize(50, 50);
@@ -52,10 +56,14 @@ public class Calculator_ALM extends Application {
         btn7.setMinSize(50, 50);
         btn8.setMinSize(50, 50);
         btn9.setMinSize(50, 50);
+        
         btnC.setMinSize(50, 50);
         btnE.setMinSize(50, 50);
         
-        
+        btnAdd.setMinSize(50, 50);
+        btnSub.setMinSize(50, 50);
+        btnMul.setMinSize(50, 50);
+        btnDiv.setMinSize(50, 50);
         
         
         btn0.setOnAction(new EventHandler<ActionEvent>() {
@@ -79,19 +87,24 @@ public class Calculator_ALM extends Application {
         
         GridPane root = new GridPane();
 
-        root.add(btn1, 0, 1);
-        root.add(btn2, 1, 1);
-        root.add(btn3, 2, 1);
-        root.add(btn4, 0, 2);
-        root.add(btn5, 1, 2);
-        root.add(btn6, 2, 2);
-        root.add(btn7, 0, 3);
-        root.add(btn8, 1, 3);
-        root.add(btn9, 2, 3);
+        root.add(btn1, 0, 0);
+        root.add(btn2, 1, 0);
+        root.add(btn3, 2, 0);
+        root.add(btn4, 0, 1);
+        root.add(btn5, 1, 1);
+        root.add(btn6, 2, 1);
+        root.add(btn7, 0, 2);
+        root.add(btn8, 1, 2);
+        root.add(btn9, 2, 2);
         
-        root.add(btnC, 0, 4);
-        root.add(btn0, 1, 4);
-        root.add(btnE, 2, 4);
+        root.add(btnC, 0, 3);
+        root.add(btn0, 1, 3);
+        root.add(btnE, 2, 3);
+        
+        root.add(btnAdd, 4, 0);
+        root.add(btnSub, 4, 1);
+        root.add(btnMul, 4, 2);
+        root.add(btnDiv, 4, 3);
         
         bp.setTop(label);
         bp.setCenter(root);
