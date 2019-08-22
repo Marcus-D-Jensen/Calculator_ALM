@@ -39,16 +39,20 @@ public class Calculate {
         return doublesToReturn;
     }
     
-    public double calculate(double firstNumber, String function, double secondNumber){
-        
+    public String calculate(double firstNumber, String function, double secondNumber){
+        //right now this method returns a String
         switch(function){
             case "/":
-                return divide(firstNumber,secondNumber);
+                return Double.toString(divide(firstNumber,secondNumber));
             case "*":
-                return multiply(firstNumber,secondNumber);
+                return Double.toString(multiply(firstNumber,secondNumber));
+            case "+":
+                return Double.toString(add(firstNumber, secondNumber));
+            case "-":
+                return Double.toString(subtract(firstNumber, secondNumber));
                 
         }
-        return 0;
+        return "ERROR!";
     }
         
 
