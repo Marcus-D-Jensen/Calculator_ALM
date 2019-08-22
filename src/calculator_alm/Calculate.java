@@ -6,5 +6,10 @@ public class Calculate {
         int c = a + b;
         return c;
     }
+    
+    public double subtract(int a, int b) {
+        int c = a - b;
+        return c; 
+    }
 
 }
