@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Calculator_ALM.jnlp">
+  <information>
+    <title>Calculator_ALM</title>
+    <vendor>Marcus D Jensen</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Calculator_ALM.jar" size="3034" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Calculator_ALM" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="calculator_alm.Calculator_ALM"  name="Calculator_ALM" />
+  <update check="always"/>
+</jnlp>
