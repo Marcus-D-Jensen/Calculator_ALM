@@ -9,16 +9,22 @@ public class Calculate {
         }
         return 0;
     }    
+    
+    public double multiply(double num1, double num2) {
+        return num1 * num2;
+
+    }
 
     public double add(double a, double b){
         double c = a + b;
         return c;
     }
     
-    public double subtract(int a, int b) {
-        int c = a - b;
+    public double subtract(double a, double b) {
+        double c = a - b;
         return c; 
     }
+
 
     public String returnFunctionFromString(String theString){
         String[] numbersAndFunction = theString.split(" ");
@@ -42,7 +48,10 @@ public class Calculate {
                 return multiply(firstNumber,secondNumber);
                 
         }
-        
+        return 0;
     }
+        
+
+   
 
 }
