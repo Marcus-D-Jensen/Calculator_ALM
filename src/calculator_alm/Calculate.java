@@ -15,8 +15,8 @@ public class Calculate {
         return c;
     }
     
-    public double subtract(int a, int b) {
-        int c = a - b;
+    public double subtract(double a, double b) {
+        double c = a - b;
         return c; 
     }
 
