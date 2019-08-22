@@ -20,9 +20,29 @@ public class Calculate {
         return c; 
     }
 
-    public String returnFunction(String args){
-        String[] numbersAndFunction = args.split(" ");
+    public String returnFunctionFromString(String theString){
+        String[] numbersAndFunction = theString.split(" ");
         return numbersAndFunction[1];
+    }
+    
+    public double[] getNumbersFromString(String theString){
+        String[] numbersAndFunction = theString.split(" ");
+        double firstNumber= Double.parseDouble(numbersAndFunction[0]);
+        double secondNumber= Double.parseDouble(numbersAndFunction[2]);
+        double[] doublesToReturn = {firstNumber, secondNumber};
+        return doublesToReturn;
+    }
+    
+    public double calculate(double firstNumber, String function, double secondNumber){
+        
+        switch(function){
+            case "/":
+                return divide(firstNumber,secondNumber);
+            case "*":
+                return multiply(firstNumber,secondNumber);
+                
+        }
+        
     }
 
 }
