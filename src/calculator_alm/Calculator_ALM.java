@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 
 public class Calculator_ALM extends Application {
     
+    Calculate calc = new Calculate();
+    
     @Override
     public void start(Stage primaryStage) {
         
@@ -100,7 +102,18 @@ public class Calculator_ALM extends Application {
         root.add(btnC, 0, 3);
         root.add(btn0, 1, 3);
         root.add(btnE, 2, 3);
-        
+        btnE.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                double firstNumber=calc.getNumbersFromString(label.getText())[0];
+                double secondNumber=calc.getNumbersFromString(label.getText())[1];
+                String function = calc.returnFunctionFromString(label.getText());
+                String svaret = calc.calculate(firstNumber, function, secondNumber);
+                
+                label.setText(svaret);
+            }
+        });
         root.add(btnAdd, 4, 0);
         root.add(btnSub, 4, 1);
         root.add(btnMul, 4, 2);
