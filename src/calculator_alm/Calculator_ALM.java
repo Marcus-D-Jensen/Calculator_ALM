@@ -65,13 +65,112 @@ public class Calculator_ALM extends Application {
         btnMul.setMinSize(50, 50);
         btnDiv.setMinSize(50, 50);
         
-        
+        //Actionlisteners for numbers        
         btn0.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
                 String temp = label.getText(); 
                 temp += "0";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn1.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "1";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn2.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "2";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn3.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "3";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn4.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "4";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn5.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "5";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn6.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "6";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn7.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "7";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn8.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "8";
+                
+                label.setText(temp);
+            }
+        });
+        
+        btn9.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText(); 
+                temp += "9";
                 
                 label.setText(temp);
             }
