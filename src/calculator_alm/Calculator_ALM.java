@@ -77,6 +77,40 @@ public class Calculator_ALM extends Application {
             }
         });
         
+        btnAdd.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " + ");
+            }
+        });
+        btnSub.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " - ");
+            }
+        });
+        btnDiv.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " / ");
+            }
+        });
+        btnMul.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " * ");
+            }
+        });
+        
+        
         btnC.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
