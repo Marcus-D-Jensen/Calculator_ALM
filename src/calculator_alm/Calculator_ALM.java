@@ -48,10 +48,10 @@ public class Calculator_ALM extends Application {
         Button btnC = new Button("C");
         Button btnE = new Button("=");
         
-        Button btnAdd = new Button("+");
-        Button btnSub = new Button("-");
-        Button btnMul = new Button("*");
-        Button btnDiv = new Button("/");
+        btnAdd = new Button("+");
+        btnSub = new Button("-");
+        btnMul = new Button("*");
+        btnDiv = new Button("/");
         
         btn0.setMinSize(50, 50);
         btn1.setMinSize(50, 50);
