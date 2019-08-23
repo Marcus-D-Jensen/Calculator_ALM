@@ -1,3 +1,4 @@
+
 /*
  * Javautveckling 2018
  */
@@ -249,13 +250,18 @@ public class Calculator_ALM extends Application {
             
             @Override
             public void handle(ActionEvent event) {
+                if(label.getText().contains("!")){
+                    System.out.println("bekraftat!");
+                    label.setText(calc.factorial(label.getText()));
+                }
+                else{
                 double firstNumber=calc.getNumbersFromString(label.getText())[0];
                 double secondNumber=calc.getNumbersFromString(label.getText())[1];
                 String function = calc.returnFunctionFromString(label.getText());
                 String svaret = calc.calculate(firstNumber, function, secondNumber);
                 
                 label.setText(svaret);
-                enableOperatorButtons();
+                }
             }
         });
         root.add(btnAdd, 4, 0);
