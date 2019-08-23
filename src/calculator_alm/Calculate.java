@@ -55,6 +55,8 @@ public class Calculate {
                 return Double.toString(add(firstNumber, secondNumber));
             case "-":
                 return Double.toString(subtract(firstNumber, secondNumber));
+            case "^":
+                return Double.toString(powerOf(firstNumber, secondNumber));
                 
         }
         return "ERROR!";
