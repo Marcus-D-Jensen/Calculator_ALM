@@ -226,6 +226,7 @@ public class Calculator_ALM extends Application {
             @Override
             public void handle(ActionEvent event) {
                 label.setText("");
+                enableOperatorButtons();
             }
         });
         
@@ -254,6 +255,7 @@ public class Calculator_ALM extends Application {
                 String svaret = calc.calculate(firstNumber, function, secondNumber);
                 
                 label.setText(svaret);
+                enableOperatorButtons();
             }
         });
         root.add(btnAdd, 4, 0);
@@ -282,6 +284,12 @@ public class Calculator_ALM extends Application {
         btnSub.setDisable(true);
         btnMul.setDisable(true);
         btnDiv.setDisable(true);
+    }
+    private void enableOperatorButtons() {
+        btnAdd.setDisable(false);
+        btnSub.setDisable(false);
+        btnMul.setDisable(false);
+        btnDiv.setDisable(false);
     }
     
 }
