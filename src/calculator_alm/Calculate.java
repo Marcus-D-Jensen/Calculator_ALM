@@ -24,6 +24,11 @@ public class Calculate {
         double c = a - b;
         return c; 
     }
+    
+    public double powerOf(double a, double b) {
+        double c = Math.pow(a, b);
+        return c;
+    }
 
 
     public String returnFunctionFromString(String theString){
