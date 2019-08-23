@@ -200,6 +200,8 @@ public class Calculator_ALM extends Application {
                 String temp = label.getText();
                 label.setText(temp + " + ");
                 disableOperandButtons();
+                btnPi.setDisable(false);
+                btnEnumber.setDisable(false);
             }
         });
         btnSub.setOnAction(new EventHandler<ActionEvent>() {
@@ -209,6 +211,8 @@ public class Calculator_ALM extends Application {
                 String temp = label.getText();
                 label.setText(temp + " - ");
                 disableOperandButtons();
+                btnPi.setDisable(false);
+                btnEnumber.setDisable(false);
             }
         });
         btnDiv.setOnAction(new EventHandler<ActionEvent>() {
@@ -218,6 +222,8 @@ public class Calculator_ALM extends Application {
                 String temp = label.getText();
                 label.setText(temp + " / ");
                 disableOperandButtons();
+                btnPi.setDisable(false);
+                btnEnumber.setDisable(false);
             }
         });
         btnMul.setOnAction(new EventHandler<ActionEvent>() {
@@ -227,6 +233,8 @@ public class Calculator_ALM extends Application {
                 String temp = label.getText();
                 label.setText(temp + " * ");
                 disableOperandButtons();
+                btnPi.setDisable(false);
+                btnEnumber.setDisable(false);
             }
         });
 
@@ -261,6 +269,9 @@ public class Calculator_ALM extends Application {
                 temp += "3.14159265";
 
                 label.setText(temp);
+                btnEnumber.setDisable(true);
+                btnPi.setDisable(true);
+                
             }
         });
 
@@ -272,6 +283,9 @@ public class Calculator_ALM extends Application {
                 temp += "2.71828182";
 
                 label.setText(temp);
+                btnEnumber.setDisable(true);
+                btnPi.setDisable(true);
+                
             }
         });
 
@@ -283,6 +297,8 @@ public class Calculator_ALM extends Application {
                 temp += "!";
 
                 label.setText(temp);
+                btnPi.setDisable(false);
+                btnEnumber.setDisable(false);
             }
         });
         
@@ -294,6 +310,8 @@ public class Calculator_ALM extends Application {
                 temp += " ^ ";
 
                 label.setText(temp);
+                btnPi.setDisable(false);
+                btnEnumber.setDisable(false);
             }
         });
 
@@ -360,9 +378,7 @@ public class Calculator_ALM extends Application {
         btnMul.setDisable(true);
         btnDiv.setDisable(true);
         btnFact.setDisable(true);
-        btnPi.setDisable(true);
         btnPower.setDisable(true);
-        btnEnumber.setDisable(true);
     }
 
     private void enableOperatorButtons() {
