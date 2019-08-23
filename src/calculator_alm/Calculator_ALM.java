@@ -23,6 +23,10 @@ public class Calculator_ALM extends Application {
     Button btnSub;
     Button btnMul;
     Button btnDiv;
+    Button btnFact;
+    Button btnEnumber;
+    Button btnPi;
+    Button btnPower;
     
     @Override
     public void start(Stage primaryStage) {
@@ -48,6 +52,10 @@ public class Calculator_ALM extends Application {
         Button btnC = new Button("C");
         Button btnE = new Button("=");
         
+        btnFact = new Button("x!");
+        btnEnumber = new Button("e");
+        btnPi = new Button("π");
+        btnPower = new Button("x^y");
         btnAdd = new Button("+");
         btnSub = new Button("-");
         btnMul = new Button("*");
@@ -71,6 +79,10 @@ public class Calculator_ALM extends Application {
         btnSub.setMinSize(50, 50);
         btnMul.setMinSize(50, 50);
         btnDiv.setMinSize(50, 50);
+        btnFact.setMinSize(50, 50);
+        btnEnumber.setMinSize(50, 50);
+        btnPi.setMinSize(50, 50);
+        btnPower.setMinSize(50, 50);
         
         
         
@@ -231,6 +243,20 @@ public class Calculator_ALM extends Application {
             }
         });
         
+        btnE.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                double firstNumber=calc.getNumbersFromString(label.getText())[0];
+                double secondNumber=calc.getNumbersFromString(label.getText())[1];
+                String function = calc.returnFunctionFromString(label.getText());
+                String svaret = calc.calculate(firstNumber, function, secondNumber);
+                
+                label.setText(svaret);
+                enableOperatorButtons();
+            }
+        });        
+        
         GridPane root = new GridPane();
 
         root.add(btn1, 0, 0);
@@ -246,12 +272,12 @@ public class Calculator_ALM extends Application {
         root.add(btnC, 0, 3);
         root.add(btn0, 1, 3);
         root.add(btnE, 2, 3);
+
         btnE.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
                 if(label.getText().contains("!")){
-                    System.out.println("bekraftat!");
                     label.setText(calc.factorial(label.getText()));
                 }
                 else{
@@ -261,9 +287,15 @@ public class Calculator_ALM extends Application {
                 String svaret = calc.calculate(firstNumber, function, secondNumber);
                 
                 label.setText(svaret);
+                enableOperatorButtons();
                 }
             }
         });
+
+        root.add(btnFact, 5, 0);
+        root.add(btnEnumber, 5, 1);
+        root.add(btnPi, 5, 2);
+        root.add(btnPower, 5, 3);
         root.add(btnAdd, 4, 0);
         root.add(btnSub, 4, 1);
         root.add(btnMul, 4, 2);
@@ -290,12 +322,20 @@ public class Calculator_ALM extends Application {
         btnSub.setDisable(true);
         btnMul.setDisable(true);
         btnDiv.setDisable(true);
+        btnFact.setDisable(true);
+        btnPi.setDisable(true);
+        btnPower.setDisable(true);
+        btnEnumber.setDisable(true);
     }
     private void enableOperatorButtons() {
         btnAdd.setDisable(false);
         btnSub.setDisable(false);
         btnMul.setDisable(false);
         btnDiv.setDisable(false);
+        btnFact.setDisable(false);
+        btnPi.setDisable(false);
+        btnPower.setDisable(false);
+        btnEnumber.setDisable(false);
     }
     
 }
