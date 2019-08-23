@@ -18,6 +18,11 @@ import javafx.stage.Stage;
 public class Calculator_ALM extends Application {
     
     Calculate calc = new Calculate();
+    Button btnAdd;
+    Button btnSub;
+    Button btnDiv;
+    Button btnMul;
+    
     
     @Override
     public void start(Stage primaryStage) {
@@ -216,7 +221,9 @@ public class Calculator_ALM extends Application {
             @Override
             public void handle(ActionEvent event) {
                 label.setText("");
+                enableOperatorButtons();
             }
+            
         });
         
         GridPane root = new GridPane();
@@ -244,6 +251,7 @@ public class Calculator_ALM extends Application {
                 String svaret = calc.calculate(firstNumber, function, secondNumber);
                 
                 label.setText(svaret);
+                enableOperatorButtons();
             }
         });
         root.add(btnAdd, 4, 0);
@@ -265,5 +273,13 @@ public class Calculator_ALM extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    
+    private void enableOperatorButtons() {
+        btnAdd.setDisable(false);
+        btnSub.setDisable(false);
+        btnMul.setDisable(false);
+        btnDiv.setDisable(false);
+    }
+    
     
 }
