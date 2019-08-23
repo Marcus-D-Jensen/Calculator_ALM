@@ -17,6 +17,12 @@ import javafx.stage.Stage;
 
 public class Calculator_ALM extends Application {
     
+    Calculate calc = new Calculate();
+    Button btnAdd;
+    Button btnSub;
+    Button btnMul;
+    Button btnDiv;
+    
     @Override
     public void start(Stage primaryStage) {
         
@@ -41,10 +47,10 @@ public class Calculator_ALM extends Application {
         Button btnC = new Button("C");
         Button btnE = new Button("=");
         
-        Button btnAdd = new Button("+");
-        Button btnSub = new Button("-");
-        Button btnMul = new Button("*");
-        Button btnDiv = new Button("/");
+        btnAdd = new Button("+");
+        btnSub = new Button("-");
+        btnMul = new Button("*");
+        btnDiv = new Button("/");
         
         btn0.setMinSize(50, 50);
         btn1.setMinSize(50, 50);
@@ -64,6 +70,8 @@ public class Calculator_ALM extends Application {
         btnSub.setMinSize(50, 50);
         btnMul.setMinSize(50, 50);
         btnDiv.setMinSize(50, 50);
+        
+        
         
         //Actionlisteners for numbers        
         btn0.setOnAction(new EventHandler<ActionEvent>() {
@@ -175,6 +183,43 @@ public class Calculator_ALM extends Application {
                 label.setText(temp);
             }
         });
+        btnAdd.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " + ");
+                disableOperandButtons();
+            }
+        });
+        btnSub.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " - ");
+                disableOperandButtons();
+            }
+        });
+        btnDiv.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " / ");
+                disableOperandButtons();
+            }
+        });
+        btnMul.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                String temp = label.getText();
+                label.setText(temp + " * ");
+                disableOperandButtons();
+            }
+        });
+        
         
         btnC.setOnAction(new EventHandler<ActionEvent>() {
             
@@ -199,7 +244,18 @@ public class Calculator_ALM extends Application {
         root.add(btnC, 0, 3);
         root.add(btn0, 1, 3);
         root.add(btnE, 2, 3);
-        
+        btnE.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                double firstNumber=calc.getNumbersFromString(label.getText())[0];
+                double secondNumber=calc.getNumbersFromString(label.getText())[1];
+                String function = calc.returnFunctionFromString(label.getText());
+                String svaret = calc.calculate(firstNumber, function, secondNumber);
+                
+                label.setText(svaret);
+            }
+        });
         root.add(btnAdd, 4, 0);
         root.add(btnSub, 4, 1);
         root.add(btnMul, 4, 2);
@@ -216,8 +272,16 @@ public class Calculator_ALM extends Application {
     }
     
     
+    
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    public void disableOperandButtons() {
+        btnAdd.setDisable(true);
+        btnSub.setDisable(true);
+        btnMul.setDisable(true);
+        btnDiv.setDisable(true);
     }
     
 }
