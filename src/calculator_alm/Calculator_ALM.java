@@ -12,6 +12,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
@@ -33,8 +36,9 @@ public class Calculator_ALM extends Application {
         BorderPane bp = new BorderPane();
 
         Label label = new Label();
+        label.setFont(Font.font("verdana", FontWeight.NORMAL, FontPosture.REGULAR, 20));
 
-        label.setMinSize(150, 50);
+        label.setMinSize(175, 75);
         label.setTextAlignment(TextAlignment.RIGHT);
 
         Button btn0 = new Button("0");
@@ -60,28 +64,49 @@ public class Calculator_ALM extends Application {
         btnMul = new Button("*");
         btnDiv = new Button("/");
 
-        btn0.setMinSize(50, 50);
-        btn1.setMinSize(50, 50);
-        btn2.setMinSize(50, 50);
-        btn3.setMinSize(50, 50);
-        btn4.setMinSize(50, 50);
-        btn5.setMinSize(50, 50);
-        btn6.setMinSize(50, 50);
-        btn7.setMinSize(50, 50);
-        btn8.setMinSize(50, 50);
-        btn9.setMinSize(50, 50);
+        btn0.setMinSize(75, 75);
+        btn1.setMinSize(75, 75);
+        btn2.setMinSize(75, 75);
+        btn3.setMinSize(75, 75);
+        btn4.setMinSize(75, 75);
+        btn5.setMinSize(75, 75);
+        btn6.setMinSize(75, 75);
+        btn7.setMinSize(75, 75);
+        btn8.setMinSize(75, 75);
+        btn9.setMinSize(75, 75);
 
-        btnC.setMinSize(50, 50);
-        btnE.setMinSize(50, 50);
+        btnC.setMinSize(75, 75);
+        btnE.setMinSize(75, 75);
 
-        btnAdd.setMinSize(50, 50);
-        btnSub.setMinSize(50, 50);
-        btnMul.setMinSize(50, 50);
-        btnDiv.setMinSize(50, 50);
-        btnFact.setMinSize(50, 50);
-        btnEnumber.setMinSize(50, 50);
-        btnPi.setMinSize(50, 50);
-        btnPower.setMinSize(50, 50);
+        btnAdd.setMinSize(75, 75);
+        btnSub.setMinSize(75, 75);
+        btnMul.setMinSize(75, 75);
+        btnDiv.setMinSize(75, 75);
+        btnFact.setMinSize(75, 75);
+        btnEnumber.setMinSize(75, 75);
+        btnPi.setMinSize(75, 75);
+        btnPower.setMinSize(75, 75);
+        
+        btn0.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn1.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn2.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn3.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn4.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn5.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn6.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn7.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn8.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btn9.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnE.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnC.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnAdd.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnSub.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnMul.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnDiv.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnFact.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnEnumber.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnPi.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        btnPower.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
 
         //Actionlisteners for numbers        
         btn0.setOnAction(new EventHandler<ActionEvent>() {
@@ -361,7 +386,7 @@ public class Calculator_ALM extends Application {
         bp.setTop(label);
         bp.setCenter(root);
 
-        Scene scene = new Scene(bp, 300, 250);
+        Scene scene = new Scene(bp, 375, 375);
 
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
