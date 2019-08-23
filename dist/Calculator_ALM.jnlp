@@ -8,11 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-<<<<<<< HEAD
-    <jar href="Calculator_ALM.jar" size="17600" download="eager" />
-=======
-    <jar href="Calculator_ALM.jar" size="17599" download="eager" />
->>>>>>> enableButtons
+    <jar href="Calculator_ALM.jar" size="17969" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Calculator_ALM" >
     <param name="requiredFXVersion" value="8.0+"/>
