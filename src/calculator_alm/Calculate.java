@@ -54,6 +54,19 @@ public class Calculate {
         }
         return "ERROR!";
     }
+    
+    public String factorial(String texten){
+        String ord=texten;
+        ord=ord.replace("!", "");
+        double siffran = Double.parseDouble(ord);
+        double numberToReturn=1;
+        for (int i = 2; i <= siffran; i++) {
+            numberToReturn = numberToReturn * i;
+        }
+        String stringToReturn ="";
+        stringToReturn+=numberToReturn;
+        return stringToReturn;
+    }
         
 
    

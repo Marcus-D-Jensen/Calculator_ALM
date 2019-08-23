@@ -25,7 +25,6 @@ public class Calculator_ALM extends Application {
         BorderPane bp = new BorderPane();
         
         Label label = new Label();
-        
         label.setMinSize(150, 50);
         label.setTextAlignment(TextAlignment.RIGHT); 
         
@@ -83,6 +82,8 @@ public class Calculator_ALM extends Application {
             
             @Override
             public void handle(ActionEvent event) {
+                
+                
                 String temp = label.getText(); 
                 temp += "1";
                 
@@ -238,12 +239,18 @@ public class Calculator_ALM extends Application {
             
             @Override
             public void handle(ActionEvent event) {
+                if(label.getText().contains("!")){
+                    System.out.println("bekraftat!");
+                    label.setText(calc.factorial(label.getText()));
+                }
+                else{
                 double firstNumber=calc.getNumbersFromString(label.getText())[0];
                 double secondNumber=calc.getNumbersFromString(label.getText())[1];
                 String function = calc.returnFunctionFromString(label.getText());
                 String svaret = calc.calculate(firstNumber, function, secondNumber);
                 
                 label.setText(svaret);
+                }
             }
         });
         root.add(btnAdd, 4, 0);
